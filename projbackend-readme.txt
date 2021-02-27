@@ -13,6 +13,7 @@ read
 ------
 formidable
 multer
+bulkwrite
 
 middleware
 >bodyparser
