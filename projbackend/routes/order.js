@@ -11,7 +11,6 @@ const {getOrderById, createOrder, getAllOrders, updateStatus, getOrderStatus} = 
 router.param('userId', getUserById)
 router.param('orderId', getOrderById);
 
-
 //actual routes
 // Create order isSigned user, isAuth not isAdmin && pushorder in list, update stock
 router.post('/order/create/:userId', isSignedIn, isAuthenticated, pushOrderInPurchaseList,updateStock,createOrder)

@@ -32,13 +32,18 @@ File structure
   |            |-------> 1. auth.js (controllers<->Routes)
   |            |-------> 2. user.js (for specific user/<id> controllers<->Routes)
   |            |-------> 3. category.js (for specific category/<id> controllers<->Routes)
-  |            |
+  |            |-------> 4. product.js 
+  |            |-------> 3. order.js 
+  |
+  |
   |
   |-------> routes (1st entry)
   |            |
   |            |-------> 1. auth.js (Routes<->controllers)
   |            |-------> 2. user.js (controllers<->Routes)
   |            |-------> 3. category.js (for specific category/<id> controllers<->Routes) 
+  |            |-------> 4. product.js 
+  |            |-------> 5. order.js 
   |            |
   |
   |     
@@ -51,7 +56,7 @@ File structure
   |
   |
   |
-  |-------> .env
+  |-------> .env (secret)
   |-------> app.js  ( Main Heart )
   
 
