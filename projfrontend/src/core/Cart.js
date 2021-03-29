@@ -5,7 +5,8 @@ import Base from "./Base";
 import Card from "./Card";
 import { getProducts } from "./helper/coreapicalls";
 import {loadCart} from './helper/cartHelper'
-import StripeCheckout from './StripeCheckout'
+import Paymentb from './Paymentb'
+
 
 const Cart = () => {
 
@@ -20,7 +21,7 @@ const Cart = () => {
 
 
 
- const loadAllProducts =()=>{
+ const loadAllProducts = products =>{
      return(
          <div>
          <h2> Section to load all Products</h2>   
@@ -46,7 +47,7 @@ const loadCheckout = () =>{
         <div>
         
             <h2>Checkout Section</h2>
-            <StripeCheckout products={products} setReload={setReload} />
+           
         </div>  
     )
 }
@@ -57,8 +58,8 @@ const loadCheckout = () =>{
     <Base title="Cart Page" description="Checkout? are you ready? ">
       <div className="row text-center">
     
-      <div className='col-4'>{loadAllProducts()}</div>
-      <div className='col-8'>{loadCheckout()}</div>
+      <div className='col-4'>{products.length> 0 ? loadAllProducts(products): (<h3>No Products</h3>)}</div>
+      <div className='col-8'><Paymentb  products={products} setReload={setReload} /></div>
   
       </div>
     </Base>

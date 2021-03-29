@@ -1,9 +1,9 @@
-import {API} from '../../backend'
+import { API } from "../../backend";
 
-export const getProducts = () =>{
-    return fetch(`${API}/products/`,{method:'GET'})
-    .then(response=>{
-        return response.json()
+export const getProducts = () => {
+  return fetch(`${API}/products`, { method: "GET" })
+    .then(response => {
+      return response.json();
     })
-    .catch(err=>console.localStorage(err))
-}
+    .catch(err => console.log(err));
+};

@@ -26,6 +26,10 @@ installation
 > npm install query-string
 
 
+
+braintree
+└─$ npm install braintree-web-drop-in-react                                                                                     
+
 ====================================
 ------ IMPORTANT -------
 
